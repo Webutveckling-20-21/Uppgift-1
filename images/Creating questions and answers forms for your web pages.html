@@ -1,0 +1,606 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<title>Creating questions and answers forms for your web pages</title>
+<meta name="keywords" content="HTML, Internet Explorer, Internet, JavaScript, Netscape / Mozilla, World Wide Web, tips, windows">
+<meta name="description" content="Creating questions and answers forms for your web pages : So you want to quiz your visitors? And possibly redirect them to different pages depending on how they answer.">
+<link rel="stylesheet" type="text/css" href="Creating%20questions%20and%20answers%20forms%20for%20your%20web%20pages-filer/tmp10_f_a66dd65083ac010b07cc19cd38ee0869.css">
+<link rel="shortcut icon" href="http://www.chami.com/i/g/cached/tmp10_dup_4c3eab9f79bef8e5973617b25abed5d0.ico">
+<link rel="stylesheet" type="text/css" href="Creating%20questions%20and%20answers%20forms%20for%20your%20web%20pages-filer/default_html.css">
+<meta name="generator" content="HTML-Kit">
+<meta name="ROBOTS" content="INDEX, FOLLOW, NOARCHIVE">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="pics-label" content="(pics-1.1  &quot;http://www.icra.org/ratingsv02.html&quot; l  gen true for &quot;http://www.chami.com&quot; r (cz 1 lz 1 nz 1 oz 1 vz 1)  gen true for &quot;http://www.htmlkit.com&quot; r (cz 1 lz 1 nz 1 oz 1 vz 1)  gen true for &quot;http://www.html-kit.com&quot; r (cz 1 lz 1 nz 1 oz 1 vz 1)  &quot;http://www.rsac.org/ratingsv01.html&quot; l  gen true for &quot;http://www.chami.com&quot; r (n 0 s 0 v 0 l 0)  gen true for &quot;http://www.htmlkit.com&quot; r (n 0 s 0 v 0 l 0)  gen true for &quot;http://www.html-kit.com&quot; r (n 0 s 0 v 0 l 0) )">
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<!-- ga:bgn -->
+<script type="text/javascript" async="" src="Creating%20questions%20and%20answers%20forms%20for%20your%20web%20pages-filer/ga.js"></script><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27404170-1']);
+  _gaq.push(['_trackPageview']);
+
+  _gaq.push(['t2._setAccount', 'UA-27433080-1']);
+  _gaq.push(['t2._trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script><style>@media print {#ghostery-tracker-tally {display:none !important}}</style>
+<!-- ga:end -->
+
+</head><div id="ghostery-tracker-tally" class="ghostery-bottom ghostery-right ghostery-collapsed"><div id="ghostery-box"><div id="ghostery-count" style="background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%; color: rgb(255, 255, 255);">3</div><div id="ghostery-pb-icons-container"><span id="ghostery-breaking-tracker" class="ghostery-pb-tracker" title="Broken Page Trackers" style="background: rgba(0, 0, 0, 0) url(&quot;data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8c3ZnIHdpZHRoPSIxOHB4IiBoZWlnaHQ9IjE4cHgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4NCiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQwICgzMzc2MikgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+DQogICAgPHRpdGxlPmJyZWFraW5ncGFnZTwvdGl0bGU+DQogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+DQogICAgPGRlZnM+PC9kZWZzPg0KICAgIDxnIGlkPSJQdXJwbGUtQm94IiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4NCiAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTQxNi4wMDAwMDAsIC00NTMuMDAwMDAwKSIgaWQ9ImJhbSEtYnJlYWtpbmctdGhlLXBhZ2UtY29weS0yIiBmaWxsPSIjRkNCQTMzIj4NCiAgICAgICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQxNi4wMDAwMDAsIDQ1My4wMDAwMDApIj4NCiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNOSwwLjE5NTY1MjE3NCBDNC4xNDQzNjAyNSwwLjE5NTY1MjE3NCAwLjE5NTY1MjE3NCw0LjE0NDM2MDI1IDAuMTk1NjUyMTc0LDkgQzAuMTk1NjUyMTc0LDEzLjg1NTYzOTggNC4xNDQzNjAyNSwxNy44MDQzNDc4IDksMTcuODA0MzQ3OCBDMTMuODU1NjM5OCwxNy44MDQzNDc4IDE3LjgwNDM0NzgsMTMuODU1NjM5OCAxNy44MDQzNDc4LDkgQzE3LjgwNDM0NzgsNC4xNDQzNjAyNSAxMy44NTU2Mzk4LDAuMTk1NjUyMTc0IDksMC4xOTU2NTIxNzQgWiBNMTEuNDg1NTg5OSwxMy40MTA0NDQxIEwxMS4wNzcwNzk4LDEzLjAyMDY3NjggTDEyLjEwMDQ3MTEsMTIuMjE2OTU3OSBMMTEuMDQ2MjQ1MSwxMi4yMTY5NTc5IEwxMS4yMzQ0NzgxLDEwLjg3MDcwODcgTDkuODAzMTgxNDIsMTEuNzk1NzUxMiBMOS40MDMzMzczNCw5LjM0NTA5MzkyIEw4LjY5NDc0MjY5LDExLjA4NjU1MTkgTDcuMzI1NzIwMDksMTAuMTcwOTgxNSBMNy43NTI1Njk3NywxMS45Mjk1NyBMNi41NTQyNDY3MywxMi4zMTE0Nzc1IEw3Ljg4MjM1Nzg3LDEzLjQxMDQ0NDEgTDExLjQ4NTU4OTksMTMuNDEwNDQ0MSBaIE02LjcxNTY3NTcyLDEzLjQxMDQ0NDEgTDUuMDI4NjMxOTcsMTIuMDA2NzU3NiBMNi44Njg0Mzg3MywxMS40MzE5ODE4IEw2LjE2Mzg3NDc3LDguNDg4NTczMDkgTDguMzQ5MzEyODgsOS45NTk5NzUxMiBMOS43MDQwMjY1NCw2LjYxMjQ5MDE1IEwxMC4zNTAzNDcxLDEwLjU1NjcxODIgTDEyLjE5NDk5MDcsOS4zNzY1MzMyOCBMMTEuODk4OTM2OCwxMS40NzY5MjM5IEwxNC4yNjI5MzQzLDExLjQ3NjkyMzkgTDEyLjIxMjkyNzIsMTMuMDc4OTIwMiBMMTIuNTY3MjI0NSwxMy40MTA0NDQxIEwxNS4zMzEyNjc3LDEzLjQxMDQ0NDEgTDE0LjQ3Mzk0MDcsMTIuNTk4NjYzOSBMMTcuMjA3MzUwNiwxMC40NjY4MzM5IEwxMy4wNjA3ODIxLDEwLjQ2NjgzMzkgTDEzLjQ5NjI5NzcsNy4zNDg2OTUgTDExLjA5OTg1MzIsOC44Nzg5NDUwNSBMMTAuMTIxMjAyNiwyLjg5Mjc3MTMgTDcuODc3NzIyNTgsOC40MjU0OTI4NSBMNC41NzA1NDQ0Nyw2LjIwMzk4MDEgTDUuNjY1NDgwNDEsMTAuNzUwMzkyNyBMMi45NTEwMTQ3MiwxMS41OTgyNDc2IEw1LjEzNjQ1MjgzLDEzLjQxMDQ0NDEgTDYuNzE1Njc1NzIsMTMuNDEwNDQ0MSBaIiBpZD0iYnJlYWtpbmdwYWdlIj48L3BhdGg+DQogICAgICAgICAgICA8L2c+DQogICAgICAgIDwvZz4NCiAgICA8L2c+DQo8L3N2Zz4=&quot;) repeat scroll 0% 0%; opacity: 0.5;"></span><span id="ghostery-slow-tracker" class="ghostery-pb-tracker" title="Slow Trackers" style="background: rgba(0, 0, 0, 0) url(&quot;data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8c3ZnIHdpZHRoPSIxN3B4IiBoZWlnaHQ9IjE3cHgiIHZpZXdCb3g9IjAgMCAxNyAxNyIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4NCiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQwICgzMzc2MikgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+DQogICAgPHRpdGxlPnNsb3d0cmFja2VyczwvdGl0bGU+DQogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+DQogICAgPGRlZnM+PC9kZWZzPg0KICAgIDxnIGlkPSJQdXJwbGUtQm94IiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4NCiAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTM5NS4wMDAwMDAsIC00NTQuMDAwMDAwKSIgaWQ9InNsb3d0cmFja2VycyIgZmlsbD0iI0ZDQkEzMyI+DQogICAgICAgICAgICA8cGF0aCBkPSJNNDAzLjUsNDU0IEMzOTguODEyMjEsNDU0IDM5NSw0NTcuODEyMjEgMzk1LDQ2Mi41IEMzOTUsNDY3LjE4Nzc5IDM5OC44MTIyMSw0NzEgNDAzLjUsNDcxIEM0MDguMTg3NzksNDcxIDQxMiw0NjcuMTg3NzkgNDEyLDQ2Mi41IEM0MTIsNDU3LjgxMjIxIDQwOC4xODc3OSw0NTQgNDAzLjUsNDU0IFogTTQwOS42MDk1ODQsNDY1LjE3ODY1NCBDNDA5LjUzMDI1OSw0NjUuMTU0MDkgNDA4LjY3NzI4Myw0NjQuNzQ2NDIgNDA3LjU2MTA5MSw0NjQuMzYyNjM3IEM0MDguNDg0Mzc4LDQ2My43NDU2MSA0MDkuMDk0NDE4LDQ2Mi42OTM2NDUgNDA5LjA5NDQxOCw0NjEuNTAxNzMzIEM0MDkuMDk0NDE4LDQ1OS42MDU1ODEgNDA3LjU1MTQwMSw0NTguMDYyMzM4IDQwNS42NTUyNDksNDU4LjA2MjMzOCBDNDAzLjc1OTA5Nyw0NTguMDYyMzM4IDQwMi4yMTU4NTQsNDU5LjYwNTU4MSA0MDIuMjE1ODU0LDQ2MS41MDE3MzMgQzQwMi4yMTU4NTQsNDYyLjA0OTM1IDQwMi4zNDUyMDgsNDYyLjU2Njc2OSA0MDIuNTczMjY5LDQ2My4wMjY0OTcgQzQwMi43ODgwMzQsNDYzLjA2ODYzOCA0MDMuMzQ0NDQsNDYzLjE3NTIzMiA0MDQuMjIzNzgyLDQ2My4zMjM5NjggQzQwNS4yMDQ1MzUsNDYzLjQ5MDI4MSA0MDUuODUyNDM2LDQ2My4zNTY0MTkgNDA2LjM5MTAzOSw0NjIuODc2NjM0IEM0MDYuNzI4MTcyLDQ2Mi41NzY0NTkgNDA2LjkyODA2NCw0NjIuMTYzNjA2IDQwNi45NTM1MjksNDYxLjcxMzc5NCBDNDA2Ljk4MDEyMSw0NjEuMjYzOTgxIDQwNi44Mjk1ODMsNDYwLjgyOTk0NCA0MDYuNTI5NDA4LDQ2MC40OTM3MTIgQzQwNi4wNDY5MTksNDU5Ljk1MjQwNSA0MDUuMjE1MTI3LDQ1OS45MDM5NTMgNDA0LjY3MjY5Myw0NjAuMzg1NTQxIEM0MDQuMjM5NTU3LDQ2MC43NzExMjYgNDA0LjE4NTAyMSw0NjEuNDQ0NDkyIDQwNC41NTIxMjcsNDYxLjg1NzM0NiBDNDA0Ljg0MDEzMyw0NjIuMTgwNTA3IDQwNS4zNjk5NDcsNDYyLjIxNzQ2NiA0MDUuNjg2Nzk5LDQ2MS45MzU3NyBDNDA1LjgwMzk4NCw0NjEuODMxODggNDA1Ljg3MzM5NCw0NjEuNjkyODM1IDQwNS44ODA2MDYsNDYxLjU0NDc3NiBDNDA1Ljg4NjY5LDQ2MS40MjQyMSA0MDUuODUwNjMzLDQ2MS4zMTA2MyA0MDUuNzgwOTk4LDQ2MS4yMzQwMDkgQzQwNS43MTg1NzQsNDYxLjE2NTUgNDA1LjYxOTE5Miw0NjEuMTI3NjQxIDQwNS41MTY4OCw0NjEuMTI4NTQyIEM0MDUuNDI5ODkyLDQ2MS4xMzEwMjEgNDA1LjMxNzIxNCw0NjEuMTY1NSA0MDUuMjQ0MTk4LDQ2MS4yMzc2MTUgQzQwNS4yMjYzOTUsNDYxLjI1NDI5MSA0MDUuMjA0NTM1LDQ2MS4yNjQ4ODMgNDA1LjE3OTc0Niw0NjEuMjY0ODgzIEM0MDUuMTI2MTExLDQ2MS4yNjQ4ODMgNDA1LjA4MzA2OCw0NjEuMjE2NDMxIDQwNS4wODMwNjgsNDYxLjE1NzYxMyBDNDA1LjA4MzA2OCw0NjEuMTIxMzMxIDQwNS4wOTc5NDEsNDYxLjA5NDk2NCA0MDUuMTE2NDIxLDQ2MS4wNjk0OTggQzQwNS4yMjYzOTUsNDYwLjkxODk2IDQwNS4zODE0NCw0NjAuODMxNzQ3IDQwNS41MzUzNTksNDYwLjgxODY3NiBDNDA1Ljc0NDAzOSw0NjAuODAxMDk5IDQwNS45MTMwNTcsNDYwLjg2MDgxOCA0MDYuMDQ2OTE5LDQ2MS4wMDc3NTEgQzQwNi4xNzk4NzksNDYxLjE1NDAwNyA0MDYuMjQ5Mjg5LDQ2MS4zNDg0OSA0MDYuMjM3MTIsNDYxLjU2MzI1NSBDNDA2LjIyMzgyNCw0NjEuODA2MTkgNDA2LjExMjk0OCw0NjIuMDMyNDQ4IDQwNS45MjM2NDksNDYyLjIwMDU2NCBDNDA1LjQ1NzE2LDQ2Mi42MTYxMjIgNDA0LjcwNzE3Myw0NjIuNTY2MDkzIDQwNC4yODU1Myw0NjIuMDkzMjk0IEM0MDMuNzg5NzQ1LDQ2MS41MzU5ODcgNDAzLjg1ODQ3OSw0NjAuNjMyMDgxIDQwNC40MzUxNjcsNDYwLjExNzgxNyBDNDA1LjEyMzQwNyw0NTkuNTA1Mjk3IDQwNi4xODI1ODQsNDU5LjU2NjgyIDQwNi43OTQyMDIsNDYwLjI1NTI4NCBDNDA3LjE1NzAyNiw0NjAuNjYyNzMgNDA3LjM0MDAxNiw0NjEuMTg4MjYyIDQwNy4zMDg0NjYsNDYxLjczMzE3NCBDNDA3LjI3NjY5MSw0NjIuMjc4OTg4IDQwNy4wMzQ2NTgsNDYyLjc3OTA1NSA0MDYuNjI2OTg3LDQ2My4xNDE2NTQgQzQwNi4xNjgzODYsNDYzLjU1MDIyNiA0MDUuNjMyMjYyLDQ2My43NDY1MTIgNDA0Ljk0NjUwMiw0NjMuNzQ2NTEyIEM0MDQuNzA1MzcsNDYzLjc0NjUxMiA0MDQuNDQ0ODU3LDQ2My43MjE3MjIgNDA0LjE2MzE2Miw0NjMuNjc0Mzk3IEM0MDMuMTkyMDk5LDQ2My41MDk2NjIgNDAyLjE1NTAwNyw0NjMuMzI0ODY5IDQwMi4wMTU5NjIsNDYzLjMwNTQ4OCBDNDAxLjMxNzEzMSw0NjMuMjEyMTkxIDQwMC43MzYxNjEsNDYyLjczNzU4OSA0MDAuNzE3NjgyLDQ2Mi4wMzk2NTkgTDQwMC44OTQ1ODcsNDU4Ljk4NzY1MyBDNDAwLjg5NDU4Nyw0NTguNzkxMzY3IDQwMC43MzUyNiw0NTguNjMxMTM4IDQwMC41MzgwNzIsNDU4LjYzMTEzOCBDNDAwLjM0MDg4NSw0NTguNjMxMTM4IDQwMC4xODE1NTgsNDU4Ljc5MDQ2NSA0MDAuMTgxNTU4LDQ1OC45ODc2NTMgQzQwMC4xODE1NTgsNDU4Ljk4NzY1MyA0MDAuMjg1NDQ3LDQ2MC44NDE0MzcgNDAwLjI5NzYxNyw0NjEuMDc1NTgzIEM0MDAuMzIwNjAzLDQ2MS41MjAyMTIgMzk5LjkxMTEzLDQ2MS44NzY3MjYgMzk5LjQ2MDQxNiw0NjEuODc2NzI2IEMzOTguOTk4NDM1LDQ2MS44NzY3MjYgMzk4LjU4NzE1OSw0NjEuNTAwODMxIDM5OC42MjM0NDEsNDYxLjAzOTUyNiBDMzk4LjY0MzQ5OCw0NjAuNzg0MTk3IDM5OC42NjQ2ODIsNDYwLjUyMDA3OSAzOTguNjg1ODY1LDQ2MC4yNzI4NjIgTDM5OC43NTk3ODIsNDU5LjAwOTUxMiBDMzk4Ljc1OTc4Miw0NTguODEzMjI2IDM5OC42MDA0NTUsNDU4LjY1Mjk5OCAzOTguNDAzMjY4LDQ1OC42NTI5OTggQzM5OC4yMDYwOCw0NTguNjUyOTk4IDM5OC4wNDY3NTMsNDU4LjgxMjMyNSAzOTguMDQ2NzUzLDQ1OS4wMDk1MTIgTDM5OC4yMjAyNzgsNDYxLjk5OTk5NyBMMzk4LjIyMDI3OCw0NjIuMDA1MTggQzM5OC4yMjAyNzgsNDY0LjA5NzYxNyAzOTkuNDE3MzczLDQ2NS44MDI4OTIgNDAxLjUxMDcxMiw0NjUuODAxMDg5IEM0MDMuNjIyNTMxLDQ2NS43OTgzODUgNDA5LjYwODY4Myw0NjUuODAxMDg5IDQwOS42MDg2ODMsNDY1LjgwMTA4OSBDNDA5Ljc4MTA4MSw0NjUuODAxMDg5IDQwOS45MjAzNTEsNDY1LjY2MTE0MyA0MDkuOTIwMzUxLDQ2NS40ODk0MjEgQzQwOS45MjAzNTEsNDY1LjMxNzAyMyA0MDkuNzczMTkzLDQ2NS4yMzA3MTEgNDA5LjYwOTU4NCw0NjUuMTc4NjU0IFoiPjwvcGF0aD4NCiAgICAgICAgPC9nPg0KICAgIDwvZz4NCjwvc3ZnPg==&quot;) repeat scroll 0% 0%; opacity: 0.5;"></span><span id="ghostery-non-secure-tracker" class="ghostery-pb-tracker" title="Non-secure Trackers" style="background: rgba(0, 0, 0, 0) url(&quot;data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8c3ZnIHdpZHRoPSIxOHB4IiBoZWlnaHQ9IjE4cHgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4NCiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQwICgzMzc2MikgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+DQogICAgPHRpdGxlPndhcm5pbmc8L3RpdGxlPg0KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPg0KICAgIDxkZWZzPjwvZGVmcz4NCiAgICA8ZyBpZD0iUHVycGxlLUJveCIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+DQogICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zNzMuMDAwMDAwLCAtNDUzLjAwMDAwMCkiIGlkPSJ3YXJuaW5nIiBmaWxsPSIjRkVCMDMyIj4NCiAgICAgICAgICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM3My4wMDAwMDAsIDQ1My4wMDAwMDApIj4NCiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNOSwwLjYzMDQzNDc4MyBDNC4zODQxNDQ5MywwLjYzMDQzNDc4MyAwLjYzMDQzNDc4Myw0LjM4NDE0NDkzIDAuNjMwNDM0NzgzLDkgQzAuNjMwNDM0NzgzLDEzLjYxNTg1NTEgNC4zODQxNDQ5MywxNy4zNjk1NjUyIDksMTcuMzY5NTY1MiBDMTMuNjE1ODU1MSwxNy4zNjk1NjUyIDE3LjM2OTU2NTIsMTMuNjE1ODU1MSAxNy4zNjk1NjUyLDkgQzE3LjM2OTU2NTIsNC4zODQxNDQ5MyAxMy42MTU4NTUxLDAuNjMwNDM0NzgzIDksMC42MzA0MzQ3ODMgWiBNNC42NDI5MjgxMSwxMS43ODk4NTUxIEM1LjI1MDQxMTY1LDExLjc4OTg1NTEgNS43NTY5NTIzNCwxMS4zNjA3NTY3IDUuODc4NzE2OTMsMTAuODgxMzY5NSBDNi4wMDA0ODE1MiwxMS4zNjEyNDM3IDYuNTA3MDIyMjIsMTEuNzIzNzM2OSA3LjExNDM4NCwxMS43MjM3MzY5IEM3LjcyNDE4MTA2LDExLjcyMzczNjkgOC4yMzI2Njk5OSwxMS4zNjUwMTg0IDguMzUxNTEyMjMsMTAuODgyNzA4OSBDOC40NzA5NjMzLDExLjM2NTAxODQgOC45Nzk0NTIyMywxMS43MzY1MjIyIDkuNTg4NzYyMjQsMTEuNzM2NTIyMiBDMTAuMTk0NjYyOCwxMS43MzY1MjIyIDEwLjcwMTIwMzUsMTEuMzk0OTcyNSAxMC44MjM0NTUyLDEwLjkxNjU1OTQgQzEwLjk0NTcwNjgsMTEuMzk0OTcyNSAxMS40NTIyNDc1LDExLjc4OTM2OCAxMi4wNTgyNjk5LDExLjc4OTM2OCBDMTIuMzUzNjcwOCwxMS43ODkzNjggMTIuNjI0NzE4OCwxMS42OTkzODQgMTIuODM5NzU1LDExLjU1OTU5ODIgQzExLjAwOTUxMTUsOC43MTgwOTk3NSAxMi4xNDUzMzE2LDQuMTM3NjgxMTYgMTIuMTQ1MzMxNiw0LjEzNzY4MTE2IEM2Ljk0NjQ3MDYzLDUuMjMxNjE0MjQgNC42NjU4MTk4NSwxMC4xMDAzNzE0IDQuMDU3OTcxMDEsMTEuNjY2MTQyMiBDNC4yMzI5NDY3MywxMS43NDMyMTkyIDQuNDMxNzg4MzEsMTEuNzg5ODU1MSA0LjY0MjkyODExLDExLjc4OTg1NTEgWiIgaWQ9Indhcm5pbmd0cmFja2VycyI+PC9wYXRoPg0KICAgICAgICAgICAgPC9nPg0KICAgICAgICA8L2c+DQogICAgPC9nPg0KPC9zdmc+&quot;) repeat scroll 0% 0%; opacity: 0.5;"></span></div><div id="ghostery-title">Trackers</div><div id="ghostery-minimize"><span id="ghostery-minimize-icon"></span></div><span id="ghostery-close" style="background: rgba(0, 0, 0, 0) url(&quot;data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8c3ZnIHdpZHRoPSIxNXB4IiBoZWlnaHQ9IjE1cHgiIHZpZXdCb3g9IjAgMCAxNSAxNSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4NCiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDMuNy4yICgyODI3NikgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+DQogICAgPHRpdGxlPmNvbGxhcHNlIGNvcHkgMjwvdGl0bGU+DQogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+DQogICAgPGRlZnM+PC9kZWZzPg0KICAgIDxnIGlkPSJQdXJwbGUtQm94IiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4NCiAgICAgICAgPGcgaWQ9ImNvbGxhcHNlLWNvcHktMiI+DQogICAgICAgICAgICA8Y2lyY2xlIGlkPSJPdmFsLTMxNSIgZmlsbC1vcGFjaXR5PSIwLjI3MDE1Mzk4NiIgZmlsbD0iI0Q4RDhEOCIgY3g9IjcuNSIgY3k9IjcuNSIgcj0iNy41Ij48L2NpcmNsZT4NCiAgICAgICAgICAgIDxwYXRoIGQ9Ik00LjM2LDQuMzYgTDEwLjU3NDU2MzQsMTAuNTc0NTYzNCIgaWQ9IkxpbmUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSI+PC9wYXRoPg0KICAgICAgICAgICAgPHBhdGggZD0iTTQuMzYsNC4zNiBMMTAuNTc0NTYzNCwxMC41NzQ1NjM0IiBpZD0iTGluZS1Db3B5IiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS1saW5lY2FwPSJzcXVhcmUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDcuNjAwMDAwLCA3LjYwMDAwMCkgc2NhbGUoLTEsIDEpIHRyYW5zbGF0ZSgtNy42MDAwMDAsIC03LjYwMDAwMCkgIj48L3BhdGg+DQogICAgICAgIDwvZz4NCiAgICA8L2c+DQo8L3N2Zz4=&quot;) repeat scroll 0% 0%;"></span></div><div id="ghostery-pb-background"><div id="ghostery-trackerList"><div class="ghostery-trackerContainer ghostery-tracker-disabled" category="advertising"><span id="ghostery-no-tracker" class="ghostery-pb-tracker-list"></span><span class="ghostery-tracker">Google Adsense</span></div><div class="ghostery-trackerContainer ghostery-tracker-disabled" category="site_analytics"><span id="ghostery-no-tracker" class="ghostery-pb-tracker-list"></span><span class="ghostery-tracker">Google Analytics</span></div><div class="ghostery-trackerContainer" category="essential"><span id="ghostery-no-tracker" class="ghostery-pb-tracker-list"></span><span class="ghostery-tracker">Google Programmable Search Engine</span></div></div></div></div>
+<body data-new-gr-c-s-check-loaded="8.883.0" data-gr-ext-installed="" bgcolor="#ffffff">
+<div class="hk14">(page <a href="http://www.chami.com/html-kit/about/">requirements</a>)</div>
+<div class="hk15" align="center">
+<div class="hk1"><!-- nav:bgn --><div class="menublock">
+
+<a href="http://www.chami.com/html-kit/"><img src="Creating%20questions%20and%20answers%20forms%20for%20your%20web%20pages-filer/tmp10_34_1993299b19ee867e1051d94467c693f8.png" alt="Chami.com Tips" class="hk3" width="116" height="116" border="0"></a><div class="hk4"><div class="hk5">
+<div id="tm">
+<div class="hk2"><div id="mm"><a href="http://www.chami.com/" title="Chami.com Homepage"><img src="Creating%20questions%20and%20answers%20forms%20for%20your%20web%20pages-filer/tmp10_label9d_defc_9b6e370452d2a676c93536f455a3c709.png" alt="Chami.com Homepage" width="50" height="23" border="0"></a><a href="http://favicon.htmlkit.com/favicon/" title="Favicon creator and other free online tools"><img src="Creating%20questions%20and%20answers%20forms%20for%20your%20web%20pages-filer/tmp10_label9d_defr_dedd236562f43404d57f061195888f04.png" alt="Free online tools and services" width="95" height="23" border="0"></a><a href="http://www.htmlkit.com/" title="Free web design tools"><img src="Creating%20questions%20and%20answers%20forms%20for%20your%20web%20pages-filer/tmp10_label9d_defc_808357574f0f8d67a4b3c334ff3c11dd.png" alt="Free web design tools" width="122" height="23" border="0"></a><a href="http://www.chami.com/tips/" title="Tips index"><img src="Creating%20questions%20and%20answers%20forms%20for%20your%20web%20pages-filer/tmp10_label9d_defc_57422b17974776dccdc7a847c060407c.png" alt="Tips index" width="44" height="23" border="0"></a><a href="http://www.chami.com/tips/html/" title="HTML and JavaScript tips"><img src="Creating%20questions%20and%20answers%20forms%20for%20your%20web%20pages-filer/tmp10_label9d_defc_3364439b79164afc30b090541c5b52a3.png" alt="HTML and JavaScript tips" width="50" height="23" border="0"></a><a href="http://www.chami.com/tips/internet/" title="Internet tips"><img src="Creating%20questions%20and%20answers%20forms%20for%20your%20web%20pages-filer/tmp10_label9d_defc_b0b5ca38b010ce0baf66259e04b55c47.png" alt="Internet tips" width="72" height="23" border="0"></a><a href="http://www.chami.com/tips/windows/" title="Windows tips"><img src="Creating%20questions%20and%20answers%20forms%20for%20your%20web%20pages-filer/tmp10_label9d_defr_09b187eb50af0af6872c01d8e7180f0b.png" alt="Windows tips" width="74" height="23" border="0"></a><a href="http://www.chami.com/tips/delphi/" title="Programming tips"><img src="Creating%20questions%20and%20answers%20forms%20for%20your%20web%20pages-filer/tmp10_label9d_defc_64a223ec25e0e203019fa8959d779c15.png" alt="Programming tips" width="101" height="23" border="0"></a></div></div>
+</div>
+<div id="sm">&nbsp; <a href="http://www.html-kit.com/e/hkforum.cgi?g=amisc" title=" Post your questions on the support forum ">Have Web Authoring Questions?</a> &nbsp; | &nbsp; <a href="http://www.chami.com/tips/internet/070598I.html" title=" Introduction to mailing lists">&lt; Previous</a> &nbsp; | &nbsp; <a href="http://www.chami.com/tips/windows/012897W.html" title=" Windows programs heaven">Random</a> &nbsp; | &nbsp; <a href="http://www.chami.com/tips/internet/080798I.html" title=" What can you do when web robots are hammering your site">Next &gt;</a></div>
+
+
+
+<!-- headerleft:bgn -->
+
+<div style="float:right;width:120px;margin-top:12px;">
+
+
+<a href="https://www.digitalocean.com/?refcode=4be483246f06">Fast SSD virtual servers for $5!</a>
+
+
+
+
+</div>
+
+<!-- headerleft:end -->
+
+
+<div id="hd"><h1>Chami.com Tips</h1><span id="st">&nbsp;</span><span id="pl"><a href="http://www.chami.com/">Home</a> &gt; <a href="http://www.chami.com/tips/">Tips</a> &gt; <a href="http://www.chami.com/tips/internet/">Internet</a> &gt; <span title="Creating questions and answers forms for your web pages">Creating questions and answers forms for your web...</span></span></div></div></div>
+<div class="hk6">&nbsp;</div>
+
+</div><div class="menublockend"><!-- --></div><!-- nav:end --></div><div class="hk1"><div class="hk16"><div>
+
+<!-- top728a:bgn -->
+
+
+
+
+<a href="http://www.htmlkit.com/tools/"><img src="Creating%20questions%20and%20answers%20forms%20for%20your%20web%20pages-filer/ads-728x90-colorcodes-1.png" alt="Modern HTML editor" width="728" height="90"></a>
+
+
+
+<!-- top728a:end -->
+
+</div>
+
+<div style="margin-top:3px;margin-bottom:1px;">
+
+<!-- top728b:bgn -->
+
+
+
+
+<a href="http://www.htmlkit.com/tools/">300+ book mentions, 95% thumbs up, millions of downloads. Get HTML-Kit Tools for $39 (limited time offer)</a>
+
+<div>&nbsp;</div>
+
+
+<!-- top728b:end -->
+
+
+</div><div class="hk11"><!-- --></div></div><div class="hk17"><div class="tl"><div class="hk18">
+
+
+
+
+<div style="text-align:left;">
+
+
+<form action="http://www.google.com/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-4996993999587489:qj5461-u2d7">
+    <input type="text" name="q" size="15" style="background: rgb(255, 255, 255) url(&quot;https://www.google.com/cse/static/images/1x/en/branding.png&quot;) no-repeat scroll left 9px top 50%;" placeholder="">
+    <input type="submit" name="sa" value="Search Tips">
+  </div>
+<input name="siteurl" value="www.chami.com/tips/internet/072698I.html" type="hidden"><input name="ref" value="duckduckgo.com/" type="hidden"><input name="ss" value="" type="hidden"></form>
+<script type="text/javascript" src="Creating%20questions%20and%20answers%20forms%20for%20your%20web%20pages-filer/brand"></script>
+
+</div>
+
+
+</div>
+
+
+
+<div style="text-align:center;margin-bottom:4px;">
+
+
+
+<!-- leftext1:bgn -->
+
+
+
+
+
+<!-- leftext1:end -->
+
+
+
+
+</div><div class="hk4"><div class="ps"><strong><!-- img: null --><img src="Creating%20questions%20and%20answers%20forms%20for%20your%20web%20pages-filer/tmp10_dup_683e97181dce2670acaf48b3cce9dfe6.png" alt=" " width="82" height="12" border="0"></strong><div class="c"><div class="hk7">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="http://ausweb.com.au/">Web Hosting</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="http://fastdot.co.uk/" target="_blank">Web Hosting UK</a>
+
+
+
+<a href="http://servers.ausweb.com.au/">Dedicated Servers</a>
+
+
+
+<a href="http://domains.ausweb.com.au/">Domain Names</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+<!-- -->
+<div style="margin-top:0px;padding-top:2px;border-top:1px solid #A5CDF7; margin-bottom:4px;">
+
+
+
+<!-- left125:bgn -->
+
+
+
+
+
+<!-- left125:end -->
+
+
+
+
+
+
+
+</div>
+<!-- --></div></div></div>
+<div class="hk4"><div class="ps"><strong>Categories</strong><div class="c">» <a href="http://www.chami.com/tips/internet/">Internet</a><br><a href="http://www.chami.com/tips/html/">HTML</a><br><a href="http://www.chami.com/tips/javascript/">JavaScript</a><br><a href="http://www.chami.com/tips/delphi/">Programming</a><br><a href="http://www.chami.com/tips/windows/">Windows</a><br></div></div></div>
+<div class="hk4"><div class="ps"><strong>Keywords</strong><div class="c"><a href="http://www.chami.com/tips/keywords/html.html">HTML</a><br>
+<a href="http://www.chami.com/tips/keywords/explorer.html">Internet Explorer</a><br>
+<a href="http://www.chami.com/tips/keywords/internet.html">Internet</a><br>
+<a href="http://www.chami.com/tips/keywords/javascript.html">JavaScript</a><br>
+<a href="http://www.chami.com/tips/keywords/mozilla.html">Netscape / Mozilla</a><br>
+<a href="http://www.chami.com/tips/keywords/www.html">World Wide Web</a></div></div></div>
+<div class="hk4"><div class="ps"><strong>Downloads</strong><div class="c"><a href="http://www.html-kit.com/dl/tips/tips_072698I_1_chkanswr.zip" class="t" title=" Download size: 0.72 KB ">chkanswr.htm</a>
+<a href="http://www.html-kit.com/dl/tips/tips_072698I_2_quiz1.zip" class="t" title=" Download size: 0.37 KB ">quiz1.htm</a>
+<a href="http://www.html-kit.com/dl/tips/tips_072698I_3_quiz2.zip" class="t" title=" Download size: 0.39 KB ">quiz2.htm</a>
+</div></div></div>
+<div class="hk4">
+
+<!-- btmlft:bgn -->
+
+
+
+<script async="" src="Creating%20questions%20and%20answers%20forms%20for%20your%20web%20pages-filer/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:inline-block;width:120px;height:240px" data-ad-client="ca-pub-4996993999587489" data-ad-slot="8699719268"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+
+
+
+<!-- btmlft:end -->
+
+
+</div>
+</div><div class="tr" style="padding-top:1em;"><div class="hk4"><div><h2 class="hk8">Creating questions and answers forms for your web pages</h2><div style="float:right;padding-left:2em;padding-bottom:1em;"><div style="margin-bottom:3px; text-align:center;">
+
+
+
+<!-- midad336:bgn -->
+
+
+
+
+<div style="width:260px;margin-left:5px;margin-bottom:1em;">
+
+
+
+<script async="" src="Creating%20questions%20and%20answers%20forms%20for%20your%20web%20pages-filer/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:inline-block;width:250px;height:250px" data-ad-client="ca-pub-4996993999587489" data-ad-slot="1584604117"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+</div>
+
+
+
+
+<!-- midad336:end -->
+
+
+
+</div></div><script language="JavaScript" type="text/javascript">
+<!--
+//
+// Documentation:
+//   http://chami.com/tips/javascript/
+//
+function checkAnswer(quizForm,
+                     theAnswer,
+                     urlRight,
+                     urlWrong)
+{
+  var s = "?";
+
+  // go through the "current choices"
+  // to find the selected choice.
+  // radio boxes pointing to choices
+  // must be named "cc"
+  // change if necessary
+  //
+  var i = 0;
+  for(;i<quizForm.elements.length;i++)
+  {
+    if(("cc" ==
+        quizForm.elements[i].name) &&
+       (quizForm.elements[i].checked))
+    {
+      s = quizForm.elements[i].value;
+    }
+  }
+
+  // no answer was selected
+  //
+  if("?" == s)
+  {
+    alert("Please make a selection.");
+    return false;
+  }
+
+  // check if we have the correct
+  // choice selected
+  //
+  if(s == theAnswer)
+  {
+    alert("'"+s+"' is correct!");
+    if(urlRight)
+    {
+    document.location.href = urlRight;
+    }
+  }
+  else
+  {
+    alert("'"+s+"' is incorrect.");
+    if( urlWrong )
+    {
+    document.location.href = urlWrong;
+    }
+  }
+
+  // return "false" to indicate not to
+  // submit the form.
+  // change this to "true" if the form
+  // "action" is valid,
+  // i.e. points to a valid CGI script
+  //
+  return false;
+}
+//-->
+</script>
+
+
+
+
+
+So you want to quiz your visitors? Following JavaScript code can help 
+you to easily create Q and A forms for your web pages without using <a href="http://www.chami.com/tips/internet/062898I.html" title="If you've ever looked for a way to add a counter to your web page you probably read about CGI scripts. But are you still wondering what it is?">CGI scripts</a>.
+
+<div>&nbsp;</div>
+The following code will let you display a dialog box indicating whether 
+the selected answer was correct or not. You can also make it redirect 
+the visitor to another web page depending on the answer.
+
+<div>&nbsp;</div>
+<strong>1</strong>. First, <a href="http://www.chami.com/tips/internet/022498I.html" title="Is your web page editor changing the HTML code you insert behind your back? Take control of your tags.">cut-and-paste the following JavaScript code on to your web page</a> (closer to the top of the page right below the <span class="hk9">BODY</span> tag is a good location):
+
+<div>&nbsp;</div>
+<div class="hk10"><div class="code">&lt;SCRIPT&nbsp;language="JavaScript"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type="text/javascript"&gt;<br>
+&lt;!--<br>
+//<br>
+//&nbsp;Documentation:<br>
+//&nbsp;&nbsp;&nbsp;http://chami.com/tips/javascript/<br>
+//<br>
+function&nbsp;checkAnswer(quizForm,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;theAnswer,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;urlRight,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;urlWrong)<br>
+{<br>
+&nbsp;&nbsp;var&nbsp;s&nbsp;=&nbsp;"?";<br>
+<br>
+&nbsp;&nbsp;//&nbsp;go&nbsp;through&nbsp;the&nbsp;"current&nbsp;choices"<br>
+&nbsp;&nbsp;//&nbsp;to&nbsp;find&nbsp;the&nbsp;selected&nbsp;choice.<br>
+&nbsp;&nbsp;//&nbsp;radio&nbsp;boxes&nbsp;pointing&nbsp;to&nbsp;choices<br>
+&nbsp;&nbsp;//&nbsp;must&nbsp;be&nbsp;named&nbsp;"cc"<br>
+&nbsp;&nbsp;//&nbsp;change&nbsp;if&nbsp;necessary<br>
+&nbsp;&nbsp;//<br>
+&nbsp;&nbsp;var&nbsp;i&nbsp;=&nbsp;0;<br>
+&nbsp;&nbsp;for(;i&lt;quizForm.elements.length;i++)<br>
+&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if(("cc"&nbsp;==<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quizForm.elements[i].name)&nbsp;&amp;&amp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(quizForm.elements[i].checked))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s&nbsp;=&nbsp;quizForm.elements[i].value;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;}<br>
+<br>
+&nbsp;&nbsp;//&nbsp;no&nbsp;choice&nbsp;was&nbsp;selected<br>
+&nbsp;&nbsp;//<br>
+&nbsp;&nbsp;if("?"&nbsp;==&nbsp;s)<br>
+&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;alert("Please&nbsp;make&nbsp;a&nbsp;selection.");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;false;<br>
+&nbsp;&nbsp;}<br>
+<br>
+&nbsp;&nbsp;//&nbsp;check&nbsp;if&nbsp;we&nbsp;have&nbsp;the&nbsp;correct<br>
+&nbsp;&nbsp;//&nbsp;choice&nbsp;selected<br>
+&nbsp;&nbsp;//<br>
+&nbsp;&nbsp;if(s&nbsp;==&nbsp;theAnswer)<br>
+&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;alert("'"+s+"'&nbsp;is&nbsp;correct!");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if(urlRight)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;document.location.href&nbsp;=&nbsp;urlRight;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;else<br>
+&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;alert("'"+s+"'&nbsp;is&nbsp;incorrect.");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if(&nbsp;urlWrong&nbsp;)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;document.location.href&nbsp;=&nbsp;urlWrong;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;}<br>
+<br>
+&nbsp;&nbsp;//&nbsp;return&nbsp;"false"&nbsp;to&nbsp;indicate&nbsp;not&nbsp;to<br>
+&nbsp;&nbsp;//&nbsp;submit&nbsp;the&nbsp;form.<br>
+&nbsp;&nbsp;//&nbsp;change&nbsp;this&nbsp;to&nbsp;"true"&nbsp;if&nbsp;the&nbsp;form<br>
+&nbsp;&nbsp;//&nbsp;"action"&nbsp;is&nbsp;valid,<br>
+&nbsp;&nbsp;//&nbsp;i.e.&nbsp;points&nbsp;to&nbsp;a&nbsp;valid&nbsp;CGI&nbsp;script<br>
+&nbsp;&nbsp;//<br>
+&nbsp;&nbsp;return&nbsp;false;<br>
+}<br>
+//--&gt;<br>
+&lt;/SCRIPT&gt;</div><div class="desc"><strong>Listing #1</strong> : JavaScript code. Download <a href="http://www.html-kit.com/dl/tips/tips_072698I_1_chkanswr.zip" class="t" title=" Download size: 0.72 KB ">chkanswr.htm</a> <small>(0.72 KB)</small>. </div></div>
+
+
+
+<div>&nbsp;</div>
+<strong>2</strong>. Insert the following HTML tags to create your quiz form (sample code shown, modify as necessary):
+
+<div>&nbsp;</div>
+<div class="hk10"><div class="code">What&nbsp;is&nbsp;JavaScript?<br>
+<br>
+&lt;FORM&nbsp;method="POST"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onSubmit="return&nbsp;checkAnswer(this,'B');"<br>
+&gt;<br>
+<br>
+&lt;INPUT&nbsp;TYPE="RADIO"&nbsp;VALUE="A"&nbsp;NAME="cc"&gt;<br>
+A.&nbsp;Another&nbsp;name&nbsp;for&nbsp;Java&lt;BR&gt;<br>
+<br>
+&lt;INPUT&nbsp;TYPE="RADIO"&nbsp;VALUE="B"&nbsp;NAME="cc"&gt;<br>
+B.&nbsp;A&nbsp;scripting&nbsp;language&nbsp;mostly&nbsp;for&nbsp;the&nbsp;web&lt;BR&gt;<br>
+<br>
+&lt;INPUT&nbsp;TYPE="RADIO"&nbsp;VALUE="C"&nbsp;NAME="cc"&gt;<br>
+C.&nbsp;When&nbsp;you&nbsp;use&nbsp;Java&nbsp;without&nbsp;compiling&lt;BR&gt;<br>
+<br>
+&lt;INPUT&nbsp;TYPE="SUBMIT"&nbsp;VALUE="Submit&nbsp;Answer"&gt;<br>
+<br>
+&lt;/FORM&gt;</div><div class="desc"><strong>Listing #2</strong> : HTML code. Download <a href="http://www.html-kit.com/dl/tips/tips_072698I_2_quiz1.zip" class="t" title=" Download size: 0.37 KB ">quiz1.htm</a> <small>(0.37 KB)</small>. </div></div>
+
+
+
+<div>&nbsp;</div>
+Demo:
+<div>&nbsp;</div>
+<center>
+<table cellspacing="0" cellpadding="5" border="1"><tbody><tr><td>
+What is JavaScript?
+
+<form method="POST" onsubmit="return checkAnswer(this,'B');">
+
+<input type="RADIO" value="A" name="cc">
+A. Another name for Java<br>
+
+<input type="RADIO" value="B" name="cc">
+B. A scripting language mostly for the web<br>
+
+<input type="RADIO" value="C" name="cc">
+C. When you use Java without compiling<br>
+<br>
+<input type="SUBMIT" value="Submit Answer">
+
+</form>
+</td></tr></tbody></table>
+</center>
+
+
+
+<div>&nbsp;</div>
+That's it! Simply keep changing the questions and answers to create more quiz forms.
+
+<div>&nbsp;</div>
+Just be sure to setup the HTML tags in the following format. The <span class="hk9">NAME</span> tag must be "cc" and there should not be any other fields named "cc". The letter specified for the <span class="hk9">VALUE</span>
+ tag is the ID for the answer (start with "A" and keep incrementing as 
+in the above sample. "X" is the answer ID in the following sample code):
+
+<div>&nbsp;</div>
+<dl><dd>
+&lt;INPUT TYPE="RADIO" <strong>VALUE="X" NAME="cc"</strong>&gt;<br>
+Custom answer text
+</dd></dl>
+
+
+<div>&nbsp;</div>
+The other thing to check is the <span class="hk9">onSubmit</span> tag 
+for the quiz form as shown below. "Y" is the letter ID for the correct 
+answer. This letter must be assigned to one of the answers in the quiz 
+form.
+
+<div>&nbsp;</div>
+<dl><dd>
+&lt;FORM method="POST"<br>
+ <strong>onSubmit="return checkAnswer(this,'Y');"</strong><br>
+&gt;
+</dd></dl>
+
+<div>&nbsp;</div>
+Let's look at another sample quiz form. This one will redirect the visitor to <strong>correct.htm</strong> if the answer is correct or to <strong>wrong.htm</strong> otherwise. Note the two additional parameters specified in the "<span class="fu">checkAnswer()</span>" function:
+
+
+<div>&nbsp;</div>
+<div class="hk10"><div class="code">What&nbsp;is&nbsp;JavaScript?<br>
+<br>
+&lt;FORM&nbsp;method="POST"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onSubmit=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"return&nbsp;checkAnswer(this,&nbsp;'C',&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'correct.htm',&nbsp;'wrong.htm');"<br>
+&gt;<br>
+<br>
+&lt;INPUT&nbsp;TYPE="RADIO"&nbsp;VALUE="A"&nbsp;NAME="cc"&gt;<br>
+Another&nbsp;name&nbsp;for&nbsp;Java&lt;BR&gt;<br>
+<br>
+&lt;INPUT&nbsp;TYPE="RADIO"&nbsp;VALUE="B"&nbsp;NAME="cc"&gt;<br>
+When&nbsp;you&nbsp;use&nbsp;Java&nbsp;without&nbsp;compiling&lt;BR&gt;<br>
+<br>
+&lt;INPUT&nbsp;TYPE="RADIO"&nbsp;VALUE="C"&nbsp;NAME="cc"&gt;<br>
+A&nbsp;scripting&nbsp;language&nbsp;mostly&nbsp;for&nbsp;the&nbsp;web&lt;BR&gt;<br>
+<br>
+&lt;INPUT&nbsp;TYPE="SUBMIT"&nbsp;VALUE="Submit&nbsp;Answer"&gt;<br>
+<br>
+&lt;/FORM&gt;</div><div class="desc"><strong>Listing #3</strong> : HTML code. Download <a href="http://www.html-kit.com/dl/tips/tips_072698I_3_quiz2.zip" class="t" title=" Download size: 0.39 KB ">quiz2.htm</a> <small>(0.39 KB)</small>. </div></div>
+
+
+<div>&nbsp;</div>
+Now that you know how to create a quiz form using JavaScript, want to make it a pop-quiz form? <a href="http://www.chami.com/tips/internet/010197I.html">This page</a> can help you to make your quiz forms pop-up.<div>&nbsp;</div><div>To share this: <a href="http://www.blinkbits.com/bookmarklets/save.php?v=1&amp;source_url=http%3A%2F%2Fwww%2Echami%2Ecom%2Ftips%2Finternet%2F072698I%2Ehtml&amp;title=Creating%20questions%20and%20answers%20forms%20for%20your%20web%20pages" title="Share on BlinkBits" rel="nofollow">BlinkBits</a> | <a href="http://www.blinklist.com/index.php?Action=Blink/addblink.php&amp;Description=&amp;Url=http%3A%2F%2Fwww%2Echami%2Ecom%2Ftips%2Finternet%2F072698I%2Ehtml&amp;title=Creating%20questions%20and%20answers%20forms%20for%20your%20web%20pages" title="Share on BlinkList" rel="nofollow">BlinkList</a> | <a href="http://blogmarks.net/my/new.php?mini=1&amp;simple=1&amp;url=http%3A%2F%2Fwww%2Echami%2Ecom%2Ftips%2Finternet%2F072698I%2Ehtml&amp;title=Creating%20questions%20and%20answers%20forms%20for%20your%20web%20pages" title="Share on Blogmarks" rel="nofollow">Blogmarks</a> | <a href="http://co.mments.com/track?url=http%3A%2F%2Fwww%2Echami%2Ecom%2Ftips%2Finternet%2F072698I%2Ehtml&amp;title=Creating%20questions%20and%20answers%20forms%20for%20your%20web%20pages" title="Share on Co.mments" rel="nofollow">Co.mments</a> | <a href="http://www.connotea.org/addpopup?continue=confirm&amp;uri=http%3A%2F%2Fwww%2Echami%2Ecom%2Ftips%2Finternet%2F072698I%2Ehtml&amp;title=Creating%20questions%20and%20answers%20forms%20for%20your%20web%20pages" title="Share on Connotea" rel="nofollow">Connotea</a> | <a href="http://del.icio.us/post?url=http%3A%2F%2Fwww%2Echami%2Ecom%2Ftips%2Finternet%2F072698I%2Ehtml&amp;title=Creating%20questions%20and%20answers%20forms%20for%20your%20web%20pages" title="Share on Del.icio.us" rel="nofollow">Del.icio.us</a> | <a href="http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fwww%2Echami%2Ecom%2Ftips%2Finternet%2F072698I%2Ehtml&amp;title=Creating%20questions%20and%20answers%20forms%20for%20your%20web%20pages&amp;topic=tips" title="Share on Digg" rel="nofollow">Digg</a> | <a href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww%2Echami%2Ecom%2Ftips%2Finternet%2F072698I%2Ehtml&amp;t=Creating%20questions%20and%20answers%20forms%20for%20your%20web%20pages" title="Share on Facebook" rel="nofollow" class="fbc-has-badge fbc-UID_1">Facebook</a> | <a href="http://cgi.fark.com/cgi/fark/farkit.pl?u=http%3A%2F%2Fwww%2Echami%2Ecom%2Ftips%2Finternet%2F072698I%2Ehtml&amp;h=Creating%20questions%20and%20answers%20forms%20for%20your%20web%20pages" title="Share on FrankIt" rel="nofollow">FrankIt</a> | <a href="http://www.furl.net/storeIt.jsp?u=http%3A%2F%2Fwww%2Echami%2Ecom%2Ftips%2Finternet%2F072698I%2Ehtml&amp;title=Creating%20questions%20and%20answers%20forms%20for%20your%20web%20pages" title="Share on Furl" rel="nofollow">Furl</a> | <a href="http://ma.gnolia.com/beta/bookmarklet/add?url=http%3A%2F%2Fwww%2Echami%2Ecom%2Ftips%2Finternet%2F072698I%2Ehtml&amp;title=Creating%20questions%20and%20answers%20forms%20for%20your%20web%20pages" title="Share on Ma.gnolia" rel="nofollow">Ma.gnolia</a> | <a href="http://www.newsvine.com/_tools/seed&amp;save?u=http%3A%2F%2Fwww%2Echami%2Ecom%2Ftips%2Finternet%2F072698I%2Ehtml&amp;title=Creating%20questions%20and%20answers%20forms%20for%20your%20web%20pages" title="Share on Newsvine" rel="nofollow">Newsvine</a> | <a href="http://reddit.com/submit?url=http%3A%2F%2Fwww%2Echami%2Ecom%2Ftips%2Finternet%2F072698I%2Ehtml&amp;title=Creating%20questions%20and%20answers%20forms%20for%20your%20web%20pages" title="Share on Reddit" rel="nofollow">Reddit</a> | <a href="http://myweb2.search.yahoo.com/myresults/bookmarklet?u=http%3A%2F%2Fwww%2Echami%2Ecom%2Ftips%2Finternet%2F072698I%2Ehtml&amp;title=Creating%20questions%20and%20answers%20forms%20for%20your%20web%20pages" title="Share on Yahoo MyWeb" rel="nofollow">Yahoo</a></div><div>&nbsp;</div><div>Applicable Keywords&nbsp;: <em>HTML</em>, <em>Internet Explorer</em>, <em>Explorer 3.x</em>, <em>Explorer 4.x</em>, <em>Explorer 5.x</em>, <em>Internet</em>, <em>JavaScript</em>, <em>JavaScript 1.0</em>, <em>JavaScript 1.1</em>, <em>JavaScript 1.2</em>, <em>Netscape Navigator</em>, <em>Navigator 2.x</em>, <em>Navigator 3.x</em>, <em>Communicator 4.x</em>, <em>Netscape 6.x</em>, <em>World Wide Web</em></div></div></div><div class="hk11">&nbsp;</div>
+<div class="hk4"><div class="hk12"><span class="l">Previous Tip :&nbsp;</span><span class="r"><a href="http://www.chami.com/tips/internet/070598I.html" title="So browsing the web isn't your style? Find a community with your interest in a mailing list.">Introduction to mailing lists</a></span><br><span class="l">Random Tip :&nbsp;</span><span class="r"><a href="http://www.chami.com/tips/windows/012897W.html" title="Still looking for that special Windows program? Here's a list of software archives to get started with your search.">Windows programs heaven</a></span><br><span class="l">Next Tip :&nbsp;</span><span class="r"><a href="http://www.chami.com/tips/internet/080798I.html" title="Is your web site constantly getting hit by automated web robots, causing service denials and excess bandwidth consumption?">What can you do when web robots are hammering your site</a></span><div class="e"><!-- --></div></div></div>
+</div><div class="te"><!-- --></div></div></div><div class="hk1">
+<!-- footer:bgn --><div>&nbsp;</div>
+<div>&nbsp;</div>
+<div class="hk4">
+<div class="hk13">Copyright © 2009 <a href="http://www.chami.com/">Chami.com</a>. All Rights Reserved. | <a href="http://www.chami.com/html-kit/ads/">Advertise</a> | <a href="http://www.htmlkit.com/">Created in HTML Kit editor</a></div></div>
+<!-- footer:end --><div>&nbsp;</div>
+</div>
+<script language="JavaScript" type="text/javascript">
+<!--
+document.write('<img src="http://www.html-kit.com/cgi-bin/lcpnp/lc0.dll?0+1+tips_s+',escape(document.referrer),'" width="2" height="2" alt="" />');
+//-->
+</script><img src="Creating%20questions%20and%20answers%20forms%20for%20your%20web%20pages-filer/lc0.htm" alt="" width="2" height="2"><noscript>
+<img src="http://www.html-kit.com/cgi-bin/lcpnp/lc0.dll?0+1+tips_s" width="2" height="2" alt="" />
+</noscript>
+
+<div class="hk11">&nbsp;</div>
+</div>
+
+
+
+<div class="fbc-badge js-fbc-UID_1 fbc-badge-small fbc-badge-share" style="z-index: 2; left: 470.5px; top: 2756.72px;"><div class="fbc-badge-fence"></div><div class="fbc-badge-tooltip">Facebook Container har inaktiverat den här knappen och blockerat Facebook från att spåra ditt besök på den här sidan.</div><div class="fbc-badge-prompt"></div></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
