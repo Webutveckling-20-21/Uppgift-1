@@ -9,18 +9,21 @@
 
 <body>
     <header>
-        <h1>Bli medlem i en aktiv förening!</h1>
+        <img src="images/ban.png" width="100%" height="150" alt="Banner">
+
+    </header>
+    <nav>
+           <h1>Bli medlem i en aktiv förening!</h1>
         <hr>
         <a href="blogg.html">Blogga om paletter</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
             href="verksamheten.html">Vad vi gör</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <a href="medlemskap.html">Bli medlem</a>
-
-    </header>
+    </nav>
     <hr>
     <main>
         <h2>Styrelsen</h2>
 
-        <table border="1">
+       <table border="1">
             <tr>
                 <th>Styrelsen</th>
                 <th>Kontakt</th>
@@ -42,6 +45,7 @@
                 <td>Örkelljunga</td>
             </tr>
         </table> <br>
+        <img src="images/Bild-Styrelse-2012.jpg" width="600" height="auto" alt="styrelsen">
         <hr>
 
         <form method="post">
@@ -49,20 +53,27 @@
                 <legend>Vill du bli medlem?</legend>
                 <label><input type="radio" name="radio">Om ja klicka i här</label><br>
                 Gå vidare och fyll i medlemsuppgifterna</a>
-                <label><input type="radio" name="radio">Om inte vill du ha information från oss klicka här</label> 
+                <label><input type="radio" name="radio">Om inte, vill du ha information från oss klicka här!</label>
             </fieldset> <br>
             <hr>
             <label for="fname">Förnamn:</label><br>
             <input type="text" id="text" name="text" value=""><br>
             <label for="lname">Last name:</label><br>
             <input type="text" id="text" name="text" value=""><br>
-          
-             <label for="fname">mail adress:</label><br>
+            <label for="text">Adress:</label><br>
             <input type="text" id="text" name="text" value=""><br>
-             <label for="fname">Adress:</label><br>
-            <input type="text" id="text" name="text" value=""><br>
-              <input type="submit" value="Submit">
-        </form>
+            
+             Skriv in födelsedatum : <br> <input type="date"><br>
+            
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" multiple> <br> <br>
+            <fieldset>
+    <legend>Godkänn ansökan</legend>
+    <label><input type="radio" name="radio"> Ja</label>
+  </fieldset> <br>
+            <input type="submit" value="Submit">
+        </form> <br>
+        <img src="images/fyr.webp" width="600" height="200"alt="Firande"> 
 
 
     </main>
