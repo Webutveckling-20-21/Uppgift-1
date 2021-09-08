@@ -13,7 +13,7 @@
 
     </header>
     <nav>
-           <h1>Bli medlem i en aktiv förening!</h1>
+        <h1>Bli medlem i en aktiv förening!</h1>
         <hr>
         <a href="blogg.html">Blogga om paletter</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
             href="verksamheten.html">Vad vi gör</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -23,7 +23,7 @@
     <main>
         <h2>Styrelsen</h2>
 
-       <table border="1">
+        <table border="1">
             <tr>
                 <th>Styrelsen</th>
                 <th>Kontakt</th>
@@ -47,6 +47,18 @@
         </table> <br>
         <img src="images/Bild-Styrelse-2012.jpg" width="600" height="auto" alt="styrelsen">
         <hr>
+        <h2>Vi finns på följande orter</h2>
+
+        <!--En form där du kan se de orter som föreningen finns-->
+        <section style="width:200px;">
+            <select>
+                <option value="0">Välj ort:</option>
+                <option value="1">Helsingborg</option>
+                <option value="2">Laholm</option>
+                <option value="2">Örkeljunga</option>
+            </select>
+        </section> <br>
+        <hr>
 
         <form method="post">
             <fieldset>
@@ -57,25 +69,43 @@
             </fieldset> <br>
             <hr>
             <label for="fname">Förnamn:</label><br>
-            <input type="text" id="text" name="text" value=""><br>
+            <input type="text" name="text" value=""><br>
             <label for="lname">Last name:</label><br>
             <input type="text" name="text" value=""><br>
             <label for="text">Adress:</label><br>
-            <input type="text" id="text" name="text" value=""><br>
-            
-             Skriv in födelsedatum : <br> <input type="date"><br>
-            
+            <input type="text" name="text" value=""><br>
+            Skriv in födelsedatum : <br> <input type="date"><br>
             <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" multiple> <br> <br>
+            <input type="email" name="email" maxlength="20" multiple> <br> <br>
+            <input type="submit" value="Submit"> <br><br>
             <fieldset>
-    <legend>Godkänn ansökan</legend>
-    <label><input type="radio" name="radio"> Ja</label>
-  </fieldset> <br>
-            <input type="submit" value="Submit">
-        </form> <br>
-        <img src="images/fyr.webp" width="600" height="200"alt="Firande"> 
+                <h4> Redan medlem logga in</h4>
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
 
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
 
+                <button type="submit">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" class="cancelbtn">Cancel</button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+            </fieldset>
+            </form> <br> <br>
+            
+           
+                <form>
+                    <fieldset>
+                        <legend> <h4> Här godkänner du din ansökan</h4</legend>
+                        <label><input type="radio" name="radio"> Ja</label>
+                    </fieldset> <br>
+
+                </form> <br>
+                <img src="images/fyr.webp" width="600" height="200" alt="Firande">
     </main>
     <hr>
     <aside>
