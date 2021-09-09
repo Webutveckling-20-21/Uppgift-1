@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palettföreningen</title>
+</head>
+
+<body>
+    <header>
+        <img src="images/ban.png" width="600" alt="Banner">
+
+    </header>
+    <nav>
+        <h1>Bli medlem i en aktiv förening!</h1>
+        <hr>
+        <a href="blogg.html">Blogga om paletter</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
+            href="verksamheten.html">Vad vi gör</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="medlemskap.html">Bli medlem</a>
+    </nav>
+    <hr>
+    <main>
+        <h2>Styrelsen</h2>
+
+        <table border="1">
+            <tr>
+                <th>Styrelsen</th>
+                <th>Kontakt</th>
+                <th>Plats</th>
+            </tr>
+            <tr>
+                <td>Ordförande</td>
+                <td>Maria Anders</td>
+                <td>Koarp</td>
+            </tr>
+            <tr>
+                <td>Ekonomi</td>
+                <td>Francisco Chang</td>
+                <td>Helsingborg</td>
+            </tr>
+            <tr>
+                <td>Sekreterare</td>
+                <td>Olle</td>
+                <td>Örkelljunga</td>
+            </tr>
+        </table> <br>
+        <img src="images/styrelse.jpg" width="600" alt="styrelsen">
+        <hr>
+
+
+        <!--En form där du kan se de orter som föreningen finns-->
+        <section style="width:200px;">
+            <h3>Vi finns på följande orter</h3>
+            <select>
+                <option value="0">Välj ort:</option>
+                <option value="1">Helsingborg</option>
+                <option value="2">Laholm</option>
+                <option value="2">Örkeljunga</option>
+            </select>
+        </section> <br>
+        <hr>
+
+
+        <form method="post">
+            <fieldset>
+                <legend> <b> Vill du bli medlem? </b> </legend>
+                <label><input type="radio" name="radio">Om ja klicka i här</label><br>
+                Gå vidare och fyll i medlemsuppgifterna
+                <label><input type="radio" name="radio">Om inte, vill du ha information från oss klicka här!</label>
+            </fieldset> <br>
+            <hr>
+            <fieldset>
+                <h4>Skriv in följande</h4>
+                <label for="myFirstName"> Förnamn:</label>
+                <input type="text" id="myFirstName" name="myFirstName" required="required">
+                <label for="myLastName"> Efternamn:</label>
+                <input type="text" id="myLastName" name="myLastName" required="required">
+                <label for="myEmailAddress"> Email Address:</label>
+                <input type="text" id="myEmailAddress" name="myEmailAddress" required="required">
+                Skriv in födelsedatum : <br> <input type="date" required="required"><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id ="email" name="email" maxlength="20" multiple> <br> <br>
+                <input type="submit" value="Submit"> <br><br>
+            </fieldset>
+            <br>
+            <fieldset>
+                <h4> Redan medlem logga in</h4>
+                <label for="uname"><b>Användarnamn:</b></label>
+                <input type="text" placeholder="Skriv in användarnamn" id ="uname"name="uname" required> <br>
+
+                <label for="psw"><b>Lösenord</b></label>
+                <input type="password" placeholder="Skriv in ditt lösenord" name="psw" required>
+
+                <button type="submit">Logga in</button>
+                <label> <br>
+                    <input type="checkbox" checked="checked" name="remember"> Kom ihåg mig
+                </label>
+                <div>
+                    <button type="button" class="cancelbtn">Avbryt</button>
+                    <span class="psw">Glömt <a href="#">ditt lösenord?</a></span>
+                </div>
+            </fieldset>
+        </form> <br> <br>
+
+
+        <form>
+            <fieldset>
+                <legend>
+                    <h4> Här godkänner du din ansökan</h4>
+                </legend>
+                <label><input type="radio" name="radio"> Ja</label>
+            </fieldset> <br>
+
+        </form> <br>
+        <img src="images/fyr.webp" width="600" alt="Firande">
+    </main>
+    <hr>
+    <aside>
+        <h4>Vad har ni för paletter?</h4>
+        <p>Vi är lite nyfikna på vad ni som medlemmar och blivande medlemmar har.</p>
+
+        <form>
+            <input type="checkbox" id="red" name="red" value="red">
+            <label for="red"> Jag har en röd</label><br>
+            <input type="checkbox" id="yellow" name="yellow" value="yellow">
+            <label for="yellow">Jag har en gul</label><br>
+            <input type="checkbox" id="green" name="green" value="green">
+            <label for="green"> Jag har en grön</label><br><br>
+            <input type="submit" value="Submit">
+        </form>
+
+
+
+
+    </aside>
+    <hr>
+    <footer>
+        <nav>
+            <p>
+                <a href="blogg.html">Startsidan</a> -
+                <a href="villkor.html">Användarvillkor</a> -
+                <a href="kontakt.html">Kontakt</a>
+            </p>
+        </nav>
+        <p> &copy; Palettföreningen</p>
+
+    </footer>
+    <hr>
+
+</body>
+
+
+</html>

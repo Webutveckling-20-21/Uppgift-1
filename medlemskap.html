@@ -45,12 +45,13 @@
                 <td>Örkelljunga</td>
             </tr>
         </table> <br>
-        <img src="images/Bild-Styrelse-2012.jpg" width="600" height="auto" alt="styrelsen">
+        <img src="images/styrelse.jpg" width="600" alt="styrelsen">
         <hr>
-        <h2>Vi finns på följande orter</h2>
+
 
         <!--En form där du kan se de orter som föreningen finns-->
         <section style="width:200px;">
+            <h3>Vi finns på följande orter</h3>
             <select>
                 <option value="0">Välj ort:</option>
                 <option value="1">Helsingborg</option>
@@ -60,56 +61,63 @@
         </section> <br>
         <hr>
 
+
         <form method="post">
             <fieldset>
-                <legend>Vill du bli medlem?</legend>
+                <legend> <b> Vill du bli medlem? </b> </legend>
                 <label><input type="radio" name="radio">Om ja klicka i här</label><br>
-                Gå vidare och fyll i medlemsuppgifterna</a>
+                Gå vidare och fyll i medlemsuppgifterna
                 <label><input type="radio" name="radio">Om inte, vill du ha information från oss klicka här!</label>
             </fieldset> <br>
             <hr>
-            <label for="fname">Förnamn:</label><br>
-            <input type="text" name="text" value=""><br>
-            <label for="lname">Last name:</label><br>
-            <input type="text" name="text" value=""><br>
-            <label for="text">Adress:</label><br>
-            <input type="text" name="text" value=""><br>
-            Skriv in födelsedatum : <br> <input type="date"><br>
-            <label for="email">Email:</label><br>
-            <input type="email" name="email" maxlength="20" multiple> <br> <br>
-            <input type="submit" value="Submit"> <br><br>
+            <fieldset>
+                <h4>Skriv in följande</h4>
+                <label for="myFirstName"> Förnamn:</label>
+                <input type="text" id="myFirstName" name="myFirstName" required="required">
+                <label for="myLastName"> Efternamn:</label>
+                <input type="text" id="myLastName" name="myLastName" required="required">
+                <label for="myEmailAddress"> Email Address:</label>
+                <input type="text" id="myEmailAddress" name="myEmailAddress" required="required">
+                Skriv in födelsedatum : <br> <input type="date" required="required"><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id ="email" name="email" maxlength="20" multiple> <br> <br>
+                <input type="submit" value="Submit"> <br><br>
+            </fieldset>
+            <br>
             <fieldset>
                 <h4> Redan medlem logga in</h4>
-                <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required>
+                <label for="uname"><b>Användarnamn:</b></label>
+                <input type="text" placeholder="Skriv in användarnamn" id ="uname" name="uname" required> <br>
 
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
+                <label for="psw"><b>Lösenord</b></label>
+                <input type="password" id="psw" placeholder="Skriv in ditt lösenord" name="psw" required>
 
-                <button type="submit">Login</button>
-                <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                <button type="submit">Logga in</button>
+                <label> <br>
+                    <input type="checkbox" checked="checked" name="remember"> Kom ihåg mig
                 </label>
-                <div class="container" style="background-color:#f1f1f1">
-                    <button type="button" class="cancelbtn">Cancel</button>
-                    <span class="psw">Forgot <a href="#">password?</a></span>
+                <div>
+                    <button type="button" class="cancelbtn">Avbryt</button>
+                    <span class="psw">Glömt <a href="#">ditt lösenord?</a></span>
                 </div>
             </fieldset>
-            </form> <br> <br>
-            
-           
-                <form>
-                    <fieldset>
-                        <legend> <h4> Här godkänner du din ansökan</h4</legend>
-                        <label><input type="radio" name="radio"> Ja</label>
-                    </fieldset> <br>
+        </form> <br> <br>
 
-                </form> <br>
-                <img src="images/fyr.webp" width="600" height="200" alt="Firande">
+
+        <form>
+            <fieldset>
+                <legend>
+                    <h4> Här godkänner du din ansökan</h4>
+                </legend>
+                <label><input type="radio" name="radio"> Ja</label>
+            </fieldset> <br>
+
+        </form> <br>
+        <img src="images/fyr.webp" width="600" alt="Firande">
     </main>
     <hr>
     <aside>
-        <h2>Vad har ni för paletter?</h2>
+        <h4>Vad har ni för paletter?</h4>
         <p>Vi är lite nyfikna på vad ni som medlemmar och blivande medlemmar har.</p>
 
         <form>
